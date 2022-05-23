@@ -6,6 +6,18 @@ public class PrimeiroProgama {
 		
 		System.out.println("Olá Mundo! primeiro progama em Java :D oi");
 		
+		int maiorIdade = 18;
+		
+		int idosoIdade = 60;
+		
+		int jovem = 16;
+		
+		int crianca = 7;
+		
+		String cpf = "421.178.858.21";
+		
+		System.out.println("Maior idade é = " + maiorIdade);
+		System.out.println("Para ser idoso sua idade deve ser maior que " + idosoIdade + " anos.");
 	}
 	
 
