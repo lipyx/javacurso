@@ -13,7 +13,7 @@ public class PrimeiroProgama2 {
 		System.out.println("Olá Mundo! primeiro progama em Java :D oi");
 		/* Essas váriaveis são locais, portanto acessiveis somente a esse metodo */
 
-		float nota1 = 20;
+		float nota1 = 50;
 		float nota2 = 75;
 		float nota3 = 65;
 		float nota4 = 59;
