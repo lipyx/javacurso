@@ -27,15 +27,18 @@ public class WhileRepeticao {
 		double resto = (carrosNumero % pessoasNumero);
 
 		if (resto == 0) {
-			System.out.println("Os carros foram divididos entre " + pessoasNumero + " pessoas e cada uma levou "
-					+ divisao + (" carros para casa."));
+			JOptionPane.showMessageDialog(null, "Os carros foram divididos entre " + pessoasNumero
+					+ " pessoas e cada uma levou " + divisao + (" carros para casa."));
+
 		} else if (pessoasNumero > carrosNumero) {
-			System.out.println(resto + " conseguiram ter seus carro, porem " + faltaCarro + " ficaram sem carros.");
+			JOptionPane.showMessageDialog(null,
+					resto + " conseguiram ter seus carro, porem " + faltaCarro + " ficaram sem.");
 		}
 
 		else {
-			System.out.println("Os carros foram divididos ente " + pessoasNumero + " pessoas e sobraram um toral de : "
-					+ resto + "carros no estoque.");
+			JOptionPane.showMessageDialog(null, "Os carros foram divididos ente " + pessoasNumero + " pessoas, cada uma levou "
+					+ divisao + " e sobraram um toral de : " + resto + " carros no estoque.");
+
 		}
 
 	}
