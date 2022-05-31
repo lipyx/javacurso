@@ -18,12 +18,20 @@ public class ClasseJava {
 		aluno1.setDataMatricula("15/15/2022");
 		aluno1.setNomeEscola("Java");
 		aluno1.setSerieMatriculado("2");
+		aluno1.setNota1(58);
+		aluno1.setNota2(89);
+		aluno1.setNota3(58.96);
+		aluno1.setNota4(79.9);
+		
 		
 		System.out.println("Meu nome é "+ aluno1.getNome());
 		System.out.println("Idade é "+ aluno1.getIdade());
 		System.out.println("Escola é "+ aluno1.getNomeEscola());
+		System.out.println("Nota media do aluno: " + aluno1.getNotaMedia());
+		System.out.println("Aluno esta " + (aluno1.getAprovacao() ? "aprovado" : "reprovado"));
 		
 		System.out.println("---------------------------------------------------------");
+		
 		/*================================================================================*/
 		Aluno aluno2 = new Aluno();
 		
