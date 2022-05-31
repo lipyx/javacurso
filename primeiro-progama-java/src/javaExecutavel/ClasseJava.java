@@ -19,14 +19,28 @@ public class ClasseJava {
 		aluno1.setNomeEscola("Java");
 		aluno1.setSerieMatriculado("2");
 		
-		System.out.println("nome é "+ aluno1.getNome());
+		System.out.println("Meu nome é "+ aluno1.getNome());
+		System.out.println("Idade é "+ aluno1.getIdade());
+		System.out.println("Escola é "+ aluno1.getNomeEscola());
 		
+		System.out.println("---------------------------------------------------------");
+		/*================================================================================*/
+		Aluno aluno2 = new Aluno();
 		
+		aluno2.setNome("Andrew");
+		aluno2.setIdade(25);
+		aluno2.setDataNascimento("08/05/1999");
+		
+		System.out.println("Meu nome é "+ aluno2.getNome());
+		System.out.println("Idade é "+ aluno2.getIdade());
+		System.out.println("Nascimento é "+ aluno2.getDataNascimento());
+		
+		/*---------------------------------------------------------------------------*/
 		Aluno aluno5 = new Aluno("Roberto"); /* Construtor com 1 parametro (nome) */
 		Aluno aluno6 = new Aluno("José", 53); /* Construtor com 2 parâmetros (nome, idade) */
 		
 		aluno1.setNome("Andrew Felipe Moreno");
-		System.out.println("o nome do aluno é "+ aluno1.getNome());
+		/*System.out.println("o nome do aluno é "+ aluno1.getNome());*/
 	}
 
 	
