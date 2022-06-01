@@ -1,5 +1,7 @@
 package javaExecutavel;
 
+import java.util.function.DoublePredicate;
+
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
@@ -19,6 +21,11 @@ public class ClasseJava {
 		String dataHoje = JOptionPane.showInputDialog("Data de hoje");
 		String nomeEscola = JOptionPane.showInputDialog("Nome da Escola");
 		String serie = JOptionPane.showInputDialog("Qual ano da serie");
+		String nota1 = JOptionPane.showInputDialog("Nota 1");
+		String nota2 = JOptionPane.showInputDialog("Nota 2");
+		String nota3 = JOptionPane.showInputDialog("Nota 3");
+		String nota4 = JOptionPane.showInputDialog("Nota 4");
+
 
 		String seri[] = { "Primeiro", "Segundo", "Terceiro", "Quarto", "Quinto", "Sexto" };
 
@@ -33,38 +40,20 @@ public class ClasseJava {
 		aluno1.setDataMatricula(dataHoje);
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setSerieMatriculado(Integer.valueOf(serie));
-		aluno1.setNota1(58);
-		aluno1.setNota2(89);
-		aluno1.setNota3(58.96);
-		aluno1.setNota4(79.9);
+		aluno1.setNota1(Double.parseDouble(nota1));
+		aluno1.setNota2(Double.parseDouble(nota2));
+		aluno1.setNota3(Double.parseDouble(nota3));
+		aluno1.setNota4(Double.parseDouble(nota4));
 
-		System.out.println("Meu nome é " + aluno1.getNome());
-		System.out.println("Idade é " + aluno1.getIdade());
-		System.out.println("Escola é " + aluno1.getNomeEscola());
-		System.out.println("Nota media do aluno: " + aluno1.getNotaMedia());
+		System.out.println(aluno1.toString());
 		System.out.println("O aluno esta matriculadno no " + seri[aluno1.getSerieMatriculado()] + " ano.");
-		System.out.println("Aluno esta " + (aluno1.getAprovacao() ? "aprovado" : "reprovado"));
+		System.out.println("Aluno esta " + (aluno1.getAprovacao() ? "aprovado" : "reprovado com média: " + aluno1.getNotaMedia()));
 
 		System.out.println("---------------------------------------------------------");
 
-		/*
-		 * =============================================================================
-		 * ===
-		 */
-		Aluno aluno2 = new Aluno();
+		
+		/*=============================================================================*/
 
-		aluno2.setNome("Andrew");
-		aluno2.setIdade(25);
-		aluno2.setDataNascimento("08/05/1999");
-
-		System.out.println("Meu nome é " + aluno2.getNome());
-		System.out.println("Idade é " + aluno2.getIdade());
-		System.out.println("Nascimento é " + aluno2.getDataNascimento());
-
-		/*---------------------------------------------------------------------------*/
-
-		aluno1.setNome("Andrew Felipe Moreno");
-		/* System.out.println("o nome do aluno é "+ aluno1.getNome()); */
 	}
 
 }
