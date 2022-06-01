@@ -2,17 +2,18 @@ package cursojava.classes;
 
 /*Essa é a classe/objeto que representa Aluno*/
 public class Aluno {
+
 	/* Atributos do Aluno */
 	private String nome;
 	private int idade;
 	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
+	private int registroGeral;
+	private int numeroCpf;
 	private String nomeMae;
 	private String nomePai;
 	private String dataMatricula;
 	private String nomeEscola;
-	private String serieMatriculado;
+	private int serieMatriculado;
 	private double nota1;
 	private double nota2;
 	private double nota3;
@@ -61,19 +62,19 @@ public class Aluno {
 		this.dataNascimento = dataNascimento;
 	}
 
-	public String getRegistroGeral() {
+	public int getRegistroGeral() {
 		return registroGeral;
 	}
 
-	public void setRegistroGeral(String registroGeral) {
+	public void setRegistroGeral(int registroGeral) {
 		this.registroGeral = registroGeral;
 	}
 
-	public String getNumeroCpf() {
+	public int getNumeroCpf() {
 		return numeroCpf;
 	}
 
-	public void setNumeroCpf(String numeroCpf) {
+	public void setNumeroCpf(int numeroCpf) {
 		this.numeroCpf = numeroCpf;
 	}
 
@@ -109,11 +110,11 @@ public class Aluno {
 		this.nomeEscola = nomeEscola;
 	}
 
-	public String getSerieMatriculado() {
+	public int getSerieMatriculado() {
 		return serieMatriculado;
 	}
 
-	public void setSerieMatriculado(String serieMatriculado) {
+	public void setSerieMatriculado(int serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
 	}
 
@@ -164,4 +165,5 @@ public class Aluno {
 
 	}
 
+	String seri[] = { "Primeiro", "Segundo", "Terceiro", "Quarto" };
 }
