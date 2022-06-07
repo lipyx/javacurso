@@ -1,5 +1,8 @@
 package cursojava.classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*Essa é a classe/objeto que representa Aluno*/
 public class Aluno {
 
@@ -7,17 +10,15 @@ public class Aluno {
 	private String nome;
 	private int idade;
 	private String dataNascimento;
-	private int registroGeral;
-	private int numeroCpf;
+	private String registroGeral;
+	private String numeroCpf;
 	private String nomeMae;
 	private String nomePai;
 	private String dataMatricula;
 	private String nomeEscola;
 	private int serieMatriculado;
-	private double nota1;
-	private double nota2;
-	private double nota3;
-	private double nota4;
+
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
 	public Aluno() {/* Cria os dados na memória - padrão Java */
 
@@ -42,6 +43,14 @@ public class Aluno {
 
 	}
 
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
+	}
+
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -62,19 +71,19 @@ public class Aluno {
 		this.dataNascimento = dataNascimento;
 	}
 
-	public int getRegistroGeral() {
+	public String getRegistroGeral() {
 		return registroGeral;
 	}
 
-	public void setRegistroGeral(int registroGeral) {
+	public void setRegistroGeral(String registroGeral) {
 		this.registroGeral = registroGeral;
 	}
 
-	public int getNumeroCpf() {
+	public String getNumeroCpf() {
 		return numeroCpf;
 	}
 
-	public void setNumeroCpf(int numeroCpf) {
+	public void setNumeroCpf(String numeroCpf) {
 		this.numeroCpf = numeroCpf;
 	}
 
@@ -118,51 +127,14 @@ public class Aluno {
 		this.serieMatriculado = serieMatriculado;
 	}
 
-	public double getNota1() {
-		return nota1;
-	}
-
-	public void setNota1(double nota1) {
-		this.nota1 = nota1;
-	}
-
-	public double getNota2() {
-		return nota2;
-	}
-
-	public void setNota2(double nota2) {
-		this.nota2 = nota2;
-	}
-
-	public double getNota3() {
-		return nota3;
-	}
-
-	public void setNota3(double nota3) {
-		this.nota3 = nota3;
-	}
-
-	public double getNota4() {
-		return nota4;
-	}
-
-	public void setNota4(double nota4) {
-		this.nota4 = nota4;
-	}
-
 	/* Metodo que retorna a media do aluno e aprovação */
 	public double getNotaMedia() {
-		return (nota1 + nota2 + nota3 + nota4) / 4;
-	}
-
-	public boolean getAprovacao() {
-		double media = this.getNotaMedia();
-		if (media >= 70) {
-			return true;
-		} else {
-			return false;
+		double somaNotas = 0.0;
+		for (Disciplina disciplina : disciplinas) {
+			somaNotas += disciplina.getNota();
 		}
 
+		return somaNotas / disciplinas.size();
 	}
 
 	@Override
@@ -170,8 +142,21 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nota4=" + nota4
-				+ "]";
+				+ serieMatriculado + "]";
+	}
+
+	double alunoNota = getNotaMedia();
+
+	public String getAlunoAprovado() {
+		double mediaAluno = this.getNotaMedia();
+		if (mediaAluno >= 50) {
+			if (mediaAluno >= 70) {
+				return "Aluno esta aprovado";
+			} else {
+				return "Aluno esta em recuperação";
+			}
+		} else {
+			return "Aluno reprovado";
+		}
 	}
 }
-
