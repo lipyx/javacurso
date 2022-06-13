@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import java.util.*;
+
 public class ClasseJava {
 
 	public static void main(String[] args) {
@@ -40,8 +41,8 @@ public class ClasseJava {
 			 * aluno1.setSerieMatriculado(Integer.valueOf(serie));
 			 */
 
-			for (int pos = 1; pos <= 4; pos++) {
-				
+			for (int pos = 0; pos <= 1; pos++) {
+
 				String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + "");
 				String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos + "");
 
@@ -49,8 +50,7 @@ public class ClasseJava {
 				disciplina.setDisciplina(nomeDisciplina);
 				disciplina.setNota(Double.valueOf(notaDisciplina));
 				aluno1.getDisciplinas().add(disciplina);
-				
-				
+
 			}
 			int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
 			if (escolha == 0) {
@@ -65,10 +65,24 @@ public class ClasseJava {
 			alunos.add(aluno1);
 
 		}
-
+		/* Algoritmo que troca um objeto de uma posição dentro da lista */
 		for (int pos = 0; pos < alunos.size(); pos++) {
 
 			Aluno aluno = alunos.get(pos);
+
+			if (aluno.getNome().equalsIgnoreCase("lipy")) {
+
+				Aluno trocar = new Aluno();
+				trocar.setNome("aluno foi trocado");
+				Disciplina disciplina = new Disciplina();
+				disciplina.setDisciplina("Matematica");
+				disciplina.setNota(96);
+
+				trocar.getDisciplinas().add(disciplina);
+
+				alunos.set(pos, trocar);
+				aluno = alunos.get(pos);
+			}
 
 			System.out.println(aluno.getNome());
 			System.out.println("nota = " + aluno.getNotaMedia());
@@ -76,8 +90,8 @@ public class ClasseJava {
 
 			for (Disciplina disc : aluno.getDisciplinas()) {
 
-				System.out.println("Matéria : " + disc.getDisciplina() +"," + " nota = " + disc.getNota());
-				
+				System.out.println("Matéria : " + disc.getDisciplina() + "," + " nota = " + disc.getNota());
+
 			}
 			System.out.println("---------------------------------------------------------");
 		}
