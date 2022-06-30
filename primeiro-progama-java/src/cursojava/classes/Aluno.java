@@ -4,16 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*Essa é a classe/objeto que representa Aluno*/
-public class Aluno {
+public class Aluno extends Pessoa {
 
 	/* Atributos do Aluno */
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
+
 	private String dataMatricula;
 	private String nomeEscola;
 	private int serieMatriculado;
@@ -144,6 +138,10 @@ public class Aluno {
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
 				+ serieMatriculado + "]";
 	}
+	
+	public double salario() {
+		return 1250.58;
+	}
 
 	double alunoNota = getNotaMedia();
 
@@ -159,4 +157,5 @@ public class Aluno {
 			return "Aluno reprovado";
 		}
 	}
+	
 }
