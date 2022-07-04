@@ -53,5 +53,5 @@ public class ArrayVetor {
 			System.out.println("\nA maior nota do aluno é: "+notaMax);
 		}
 		
-	}
+	}//
 }
