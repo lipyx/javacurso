@@ -23,15 +23,15 @@ public class SplitArray {
 		List<String> lista = Arrays.asList(textoArray);
 
 		for (String string : lista) {
-			//System.out.println(string);
+			System.out.println(string);
 		}
 		// Converter lista em Array
 		String[] conversorLista = lista.toArray(new String[6]);
 
-		for (int pos = 0; pos < conversorLista.length; pos ++) {
+		for (int pos = 0; pos < conversorLista.length; pos++) {
 			System.out.println(conversorLista[pos]);
 		}
-		
+
 	}
 
 }
