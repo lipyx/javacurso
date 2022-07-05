@@ -13,7 +13,7 @@ public class AulaThread {
 				for (int pos = 0; pos < 10; pos++) {
 					try {
 						Thread.sleep(1000);
-						System.out.println("Exemplo de espera manipulando as thread.");
+						System.out.println("Exemplo de espera, manipulando as thread.");
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
