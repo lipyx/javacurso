@@ -6,30 +6,26 @@ public class AulaThread {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		new Thread() {
-
-			// comando que executa o codigo dentro da thread
-			public void run() {
-
-				for (int pos = 0; pos < 10; pos++) {
-					try {
-						Thread.sleep(1000);
-						System.out.println("Exemplo de espera, manipulando as thread.Envio de e-mail");
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-
-					}
-				}
-			}
-
-		}.start();// comando "start" inicia a thread
+		// Objeto da thread, aumento do poder de manipulação da thread.
+		Thread threadEmail = new Thread(thread1);
+		threadEmail.start();
 
 		/*-------------- DIVISÃO DE THREAD------------*/
 
-		new Thread() {
+		Thread threadNota = new Thread(thread2);
+		threadNota.start();
 
-			// comando que executa o codigo dentro da thread
-			public void run() {
+		JOptionPane.showMessageDialog(null, "O progama esta terminando o processo por trás do sistema");
+
+	}
+
+	// -------- Transformando uma thread em Objeto atraves do metodo Runnable
+	public static Runnable thread1 = new Runnable() {
+
+		@Override
+		public void run() {
+
+			{
 
 				for (int pos = 0; pos < 10; pos++) {
 					try {
@@ -42,9 +38,26 @@ public class AulaThread {
 				}
 			}
 
-		}.start();// comando "start" inicia a thread
+		}
+	};
+	public static Runnable thread2 = new Runnable() {
 
-		JOptionPane.showMessageDialog(null, "O progama esta terminando o processo por trás dos sistema");
-	}
+		@Override
+		public void run() {
 
+			{
+
+				for (int pos = 0; pos < 10; pos++) {
+					try {
+						Thread.sleep(1000);
+						System.out.println("Exemplo de espera, manipulando as thread.Envio de e-mail");
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+
+					}
+				}
+			}
+
+		}
+	};
 }
