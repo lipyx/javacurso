@@ -7,7 +7,7 @@ public class Conversor {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.print("Qual a temperatura em graus? .");
+		System.out.print("Qual a temperatura em graus?");
 		try (Scanner txt = new Scanner(System.in)) {
 			Double graus = txt.nextDouble();
 			// Variaveis de convers�o
