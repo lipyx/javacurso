@@ -15,13 +15,13 @@ public class ImplementacaoFilaThread extends Thread {
 
 	@Override
 	public void run() {
-		Iterator iterator = pilhaFila.iterator();
+		Iterator<ObjetoFilaThread> iterator = pilhaFila.iterator();
 
 		synchronized (iterator) { // bloqueia o acesso a lista por outros processos
 
 			while (iterator.hasNext()) {
 
-				ObjetoFilaThread processar = (ObjetoFilaThread) iterator.next();
+				ObjetoFilaThread processar = (ObjetoFilaThread) iterator.next();// exemplo
 
 				// Processar 10 mil nota fiscais
 				// Disparar milhares de e-mails

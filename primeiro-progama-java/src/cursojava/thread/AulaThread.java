@@ -6,16 +6,16 @@ public class AulaThread {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		// Objeto da thread, aumento do poder de manipulação da thread.
+		// Objeto da thread, aumento do poder de manipulaÃ§Ã£o da thread.
 		Thread threadEmail = new Thread(thread1);
 		threadEmail.start();
 
-		/*-------------- DIVISÃO DE THREAD------------*/
+		/*-------------- DIVISï¿½O DE THREAD------------*/
 
 		Thread threadNota = new Thread(thread2);
 		threadNota.start();
 
-		JOptionPane.showMessageDialog(null, "O progama esta terminando o processo por trás do sistema");
+		JOptionPane.showMessageDialog(null, "O progama esta terminando o processo por trÃ¡s do sistema");
 
 	}
 
@@ -30,7 +30,7 @@ public class AulaThread {
 				for (int pos = 0; pos < 10; pos++) {
 					try {
 						Thread.sleep(2000);
-						System.out.println("Exemplo de espera, manipulando as thread.Emissão de nota");
+						System.out.println("Exemplo de espera, manipulando as thread.EmissÃ£o de nota");
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 
@@ -50,7 +50,7 @@ public class AulaThread {
 				for (int pos = 0; pos < 10; pos++) {
 					try {
 						Thread.sleep(1000);
-						System.out.println("Exemplo de espera, manipulando as thread.Envio de e-mail");
+						System.out.println("Exemplo de espera, manipulando as thread.Envio de e-mail.");
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 
@@ -60,4 +60,4 @@ public class AulaThread {
 
 		}
 	};
-}
+}// classe 
