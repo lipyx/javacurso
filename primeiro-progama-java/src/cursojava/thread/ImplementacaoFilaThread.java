@@ -15,33 +15,44 @@ public class ImplementacaoFilaThread extends Thread {
 
 	@Override
 	public void run() {
-		Iterator<ObjetoFilaThread> iterator = pilhaFila.iterator();
 
-		synchronized (iterator) { // bloqueia o acesso a lista por outros processos
+		System.out.println("Fila rodando");
+		while (true) {
 
-			while (iterator.hasNext()) {
+			synchronized (pilhaFila) { // bloqueia o acesso a lista por outros processos
 
-				ObjetoFilaThread processar = (ObjetoFilaThread) iterator.next();// exemplo
+				Iterator<ObjetoFilaThread> iterator = pilhaFila.iterator();
 
-				// Processar 10 mil nota fiscais
-				// Disparar milhares de e-mails
-				// Gerar lista grande de PDF
-				
-				iterator.remove();
+				while (iterator.hasNext()) { // enquanto tiver dados na lista ele ira processar
 
-				try {
-					Thread.sleep(200);
-				} catch (InterruptedException e) {// tempo para descarga de memoria entre processos
+					ObjetoFilaThread processar = (ObjetoFilaThread) iterator.next();// exemplo
+
+					// Processar 10 mil nota fiscais
+					// Disparar milhares de e-mails
+					// Gerar lista grande de PDF
+
+					
+					
+					System.out.println("----------------------");
+					System.out.println(processar.getNome());
+					System.out.println(processar.getEmail());
+					
+					
+					iterator.remove();
+					
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {// tempo para descarga de memoria entre processos
+					}
 				}
 			}
-		}
 
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-
 	}
 }

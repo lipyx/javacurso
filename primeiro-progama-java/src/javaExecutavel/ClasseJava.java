@@ -15,8 +15,8 @@ import status.aprovacao.StatusAluno;
 public class ClasseJava {
 
 	public static void main(String[] args) {
-		/* new Aluno() é uma instância (criação de um objeto) */
-		/* aluno1 é uma referência para o objeto */
+		/* new Aluno() ï¿½ uma instï¿½ncia (criaï¿½ï¿½o de um objeto) */
+		/* aluno1 ï¿½ uma referï¿½ncia para o objeto */
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		List<Aluno> listAprovados = new ArrayList<Aluno>();
 		List<Aluno> listRecuperacao = new ArrayList<Aluno>();
@@ -38,7 +38,7 @@ public class ClasseJava {
 				 * = JOptionPane.showInputDialog("data de nascimento"); String rg =
 				 * JOptionPane.showInputDialog("qual o RG 'SOMENTE NUMEROS'"); String cpf =
 				 * JOptionPane.showInputDialog("qual o CPF"); String nomeMae =
-				 * JOptionPane.showInputDialog("nome da Mãe"); String nomePai =
+				 * JOptionPane.showInputDialog("nome da Mï¿½e"); String nomePai =
 				 * JOptionPane.showInputDialog("nome do Pai"); String dataHoje =
 				 * JOptionPane.showInputDialog("Data de hoje"); String nomeEscola =
 				 * JOptionPane.showInputDialog("Nome da Escola"); String serie =
@@ -93,40 +93,40 @@ public class ClasseJava {
 			}
 			System.out.println("--------------Lista de Aprovados ----------------");
 			for (Aluno aluno : listAprovados) {
-				System.out.println("Nome: " + aluno.getNome() + " " + aluno.getAlunoAprovado() + " com média: "
+				System.out.println("Nome: " + aluno.getNome() + " " + aluno.getAlunoAprovado() + " com mï¿½dia: "
 						+ aluno.getNotaMedia());
 				for (Disciplina disci : aluno.getDisciplinas()) {
-					System.out.println("Matéria: " + disci.getDisciplina() + " -> " + "Nota: " + disci.getNota());
+					System.out.println("Matï¿½ria: " + disci.getDisciplina() + " -> " + "Nota: " + disci.getNota());
 				}
 			}
 
-			System.out.println("--------------Lista de Recuperação ----------------");
+			System.out.println("--------------Lista de Recuperaï¿½ï¿½o ----------------");
 			for (Aluno aluno : listRecuperacao) {
-				System.out.println("Nome: " + aluno.getNome() + " " + aluno.getAlunoAprovado() + " com média: "
+				System.out.println("Nome: " + aluno.getNome() + " " + aluno.getAlunoAprovado() + " com mï¿½dia: "
 						+ aluno.getNotaMedia());
 				for (Disciplina disci : aluno.getDisciplinas()) {
-					System.out.println("Matéria: " + disci.getDisciplina() + " -> " + "Nota: " + disci.getNota());
+					System.out.println("Matï¿½ria: " + disci.getDisciplina() + " -> " + "Nota: " + disci.getNota());
 				}
 
 			}
 
 			System.out.println("-------------- Lista de Reprovados ----------------");
 			for (Aluno aluno : listReprovado) {
-				System.out.println("Nome: " + aluno.getNome() + " " + aluno.getAlunoAprovado() + " com média: "
+				System.out.println("Nome: " + aluno.getNome() + " " + aluno.getAlunoAprovado() + " com mï¿½dia: "
 						+ aluno.getNotaMedia());
 				for (Disciplina disci : aluno.getDisciplinas()) {
-					System.out.println("Matéria: " + disci.getDisciplina() + " -> " + "Nota: " + disci.getNota());
+					System.out.println("Matï¿½ria: " + disci.getDisciplina() + " -> " + "Nota: " + disci.getNota());
 				}
 			}
 		}else {
-			JOptionPane.showInternalMessageDialog(null, "Acesso não permitido");
+			JOptionPane.showInternalMessageDialog(null, "Acesso nï¿½o permitido");
 		}
 		
 	}// Final da classe main
 }// final da classe ClasseJava
 
 /*
- * /* Algoritmo que troca um objeto de uma posição dentro da lista for (int pos
+ * /* Algoritmo que troca um objeto de uma posiï¿½ï¿½o dentro da lista for (int pos
  * = 0; pos < alunos.size(); pos++) {
  * 
  * Aluno aluno = alunos.get(pos);
@@ -146,7 +146,7 @@ public class ClasseJava {
  * 
  * for (Disciplina disc : aluno.getDisciplinas()) {
  * 
- * System.out.println("Matéria : " + disc.getDisciplina() + "," + " nota = " +
+ * System.out.println("Matï¿½ria : " + disc.getDisciplina() + "," + " nota = " +
  * disc.getNota());
  * 
  * } System.out.println(
@@ -160,7 +160,7 @@ public class ClasseJava {
  * "Sexto" }; System.out.println(aluno.toString());
  * System.out.println("O aluno esta matriculadno no " +
  * seri[aluno.getSerieMatriculado()] + " ano.");
- * System.out.println("Média do aluno " + aluno.getNotaMedia());
+ * System.out.println("Mï¿½dia do aluno " + aluno.getNotaMedia());
  * System.out.println("Aluno esta " + aluno.getAlunoAprovado());
  * System.out.println(
  * "---------------------------------------------------------"); }
