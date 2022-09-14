@@ -23,7 +23,7 @@ public class ModuloDatas{
 		
 		System.out.println("Dia do mês "+ calendar.get(Calendar.DAY_OF_MONTH));
 		System.out.println("Dia da semana "+ calendar.get(Calendar.DAY_OF_WEEK));
-		System.out.println("Hora do dia "+ calendar.get(Calendar.HOUR_OF_DAY));
+		System.out.println("Hora do dia "+ calendar.get(Calendar.DAY_OF_WEEK));
 		System.out.println("Minuto da hora "+calendar.get(Calendar.MINUTE));
 		System.out.println("Segundos da hora "+ calendar.get(Calendar.SECOND));
 		System.out.println("Ano " + calendar.get(Calendar.YEAR));
