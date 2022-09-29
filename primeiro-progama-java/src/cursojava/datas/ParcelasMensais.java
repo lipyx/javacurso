@@ -9,6 +9,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
+import javax.swing.JOptionPane;
+
 public class ParcelasMensais {
 
 	public static void main(String[] args) throws ParseException {
@@ -36,6 +38,10 @@ public class ParcelasMensais {
 	
 		String diaHora = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm.ss"));
 		System.out.println("Dia e hora atual: "+ diaHora);
-
+		
+		String data = JOptionPane.showInputDialog("Data");
+		
+		LocalDateTime dia = LocalDateTime.now();
+		System.out.println("Dia da semana "+ dia.getDayOfWeek());
 	}
 }
